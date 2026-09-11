@@ -1,0 +1,42 @@
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  TargetRubyVersion: 3.2
+
+# ── Style ────────────────────────────────────────────────────────────────────
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+# ── Metrics ──────────────────────────────────────────────────────────────────
+# Strategy implementations, phase orchestrators, and the CLI option parser
+# are inherently verbose.  Raise the limits rather than fragmenting the logic.
+
+Metrics/MethodLength:
+  Max: 30
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+
+Metrics/AbcSize:
+  Max: 45
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/BlockLength:
+  Max: 50
+  AllowedMethods:
+    - describe
+    - context
+    - it
+    - shared_examples
+    - shared_context
+
+Metrics/CyclomaticComplexity:
+  Max: 12
+
+Metrics/PerceivedComplexity:
+  Max: 12
