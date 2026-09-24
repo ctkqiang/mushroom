@@ -1,0 +1,16 @@
+admin
+ansible
+automation
+backup
+ci
+deploy
+developer
+devops
+infra
+jenkins
+ops
+pipeline
+svc-automation
+svc-deploy
+svc-terraform
+terraform
