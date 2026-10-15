@@ -1,0 +1,37 @@
+# Mushroom – example settings file
+# Copy to config/settings.yml and adjust for your environment.
+# All fields are optional; CLI flags and defaults are used when absent.
+
+# Set to false only when running against a live sandbox account.
+dry_run: true
+
+# Set to false only if you accept cleanup responsibility outside Mushroom.
+cleanup: true
+
+# Account IDs Mushroom is permitted to target.
+# Leave empty to allow any account (rely on deny_accounts for safety).
+allow_accounts: []
+#   - "123456789012"
+
+# Account IDs that Mushroom must NEVER target.
+deny_accounts: []
+#   - "000000000000"
+
+# SSRF endpoint URL for Phase 2 (Harvest).
+# ssrf_endpoint: "https://vulnerable.example.com/proxy"
+
+# S3 bucket for CloudFormation templates (Phase 4 live mode).
+# template_bucket: "my-cfn-templates-bucket"
+
+# ARN of the CloudFormation service execution role (Phase 4 live mode).
+# execution_role_arn: "arn:aws:iam::123456789012:role/MyCFNExecutionRole"
+
+# Named AWS CLI profile to use for SDK calls.
+# profile: "my-sandbox-profile"
+
+# Output paths (relative to working directory).
+verdict_path: "tmp/mushroom-verdicts.jsonl"
+audit_path:   "tmp/mushroom-audit.jsonl"
+
+# Lookback window in hours (informational — used in TimeDelay simulation).
+timeframe_hours: 1
