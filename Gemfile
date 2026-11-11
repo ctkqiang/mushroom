@@ -11,7 +11,7 @@ gem 'aws-sdk-s3',             '~> 1.233'
 gem 'aws-sdk-sts',            '~> 1.12'
 gem 'colorize',               '~> 1.1'
 gem 'dotenv',                 '~> 3.2'
-gem 'nokogiri', '~> 1.16'
+gem 'nokogiri', '~> 1.19'
 gem 'thor', '~> 1.5'
 gem 'tty-table', '~> 0.12'
 
